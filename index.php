@@ -1,7 +1,7 @@
 <?php
 session_start();
 ?>
-<link href="css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 
 <?php 
   include("header.php");

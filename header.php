@@ -21,7 +21,7 @@
                 <a href="https://goo.gl/maps/jZKSMZBfw5D2" target="_blank"> Address: No. U-15, J.V.P.D. Scheme, Bhaktivedanta Swami Rd, Vile Parle</a>
               </li>
               <li class="nav-item">
-                <a>Ambulance Number: +91 9930035998</a>
+                <a href="">Ambulance Number: +91 9930035998</a>
               </li>
               <?php
                 if (isset($_SESSION['username'])) {
