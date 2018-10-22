@@ -26,7 +26,7 @@
 
 
   if(isset($_POST['payment'])){
-      $i = update_appointment_info($_POST['appointment_no'], 'payment_amount', $_POST['payment']);
+      $i = update_appointment_info($_POST['appointment_no'], 'payment_amount', $_POST['payment'], $_POST['case']);
       if($i==1){
         echo "<script type='text/javascript'>window.location = 'all_appointments.php'</script>";
       }
@@ -55,19 +55,30 @@
 
     echo "$link Medical Condition $mid" . $row['medical_condition'] . "$endingTag";
 
+    echo "<form action='payment.php' method='post'>";
 
-    echo "$link Payment $mid" . "<form action='payment.php' method='post'>
-
+    echo "$link Payment $mid" . "
 
           <select required value=1 class ='form-control' name='payment' style='width: 500;'>
                 <option value='200' class='option'>200</option>
                 <option value='500' class='option'>500</option>
                 <option value='900' class='option'>900</option>
           </select>
-<input type='number' style='visibility: hidden; width; 1px;' name=\"appointment_no\" value =" . $appointment_no . ">
-    
-    <input type='submit' class='btn btn-primary'></form>" . "$endingTag";
 
+    " . "$endingTag";
+    
+    echo "<input type='number' style='visibility: hidden; width; 1px;' name=\"appointment_no\" value =" . $appointment_no . ">";
+    
+    echo "$link Case Closed? $mid" . "
+
+          <select required value=1 class ='form-control' name='case' style='width: 500;'>
+                <option value='yes' class='option'>Yes</option>
+                <option value='no' class='option'>No</option>
+          </select>
+            <br/>
+          <input type='submit' class='btn btn-primary'></form>
+    
+    " . "$endingTag";
 
     echo "</tr>";
   

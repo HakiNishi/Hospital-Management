@@ -190,7 +190,7 @@
         }
     }
 
-    function update_appointment_info($appointment_no_unsafe, $column_name_unsafe, $data_unsafe)
+    function update_appointment_info($appointment_no_unsafe, $column_name_unsafe, $data_unsafe, $case_unsafe='no')
     {
         global $connection;
 
@@ -199,10 +199,11 @@
         $appointment_no = (int) secure($appointment_no_unsafe);
         $column_name = secure($column_name_unsafe);
         $data = secure($data_unsafe);
+        $case = secure($case_unsafe);
 
         if ($column_name == 'payment_amount') {
             $data = (int) $data;
-            $sql = "UPDATE `appointments` SET `payment_amount` = '$data', `case_closed` = 'no' WHERE `appointment_no` = $appointment_no";
+            $sql = "UPDATE `appointments` SET `payment_amount` = '$data', `case_closed` = '$case' WHERE `appointment_no` = $appointment_no";
         } else {
             $sql = "UPDATE appointments SET $column_name = '$data' WHERE appointment_no = $appointment_no;";
         }
@@ -230,7 +231,7 @@
     {
         global $connection;
 
-        return $connection->query('SELECT appointment_no, full_name,speciality, medical_condition, payment_amount FROM patient_info, appointments where patient_info.patient_id = appointments.patient_id');
+        return $connection->query("SELECT appointment_no, full_name,speciality, case_closed, payment_amount FROM patient_info, appointments where patient_info.patient_id = appointments.patient_id");
     }
 
     function getAllPatientDetail($appointment_no)

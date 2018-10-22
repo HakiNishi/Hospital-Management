@@ -26,9 +26,10 @@
 				<tr>
 				<th><center>Appointment No</center></th>
 				<th><center>Patient's Full Name</center></th>
-				<th><center>Medical Condition</center></th>
+				<!-- <th><center>Medical Condition</center></th> -->
 				<th><center>Doctor Needed</center></th>
 				<th><center>Payment Amount</center></th>
+				<th><center>Case Closed?</center></th>
 				</tr>
 				</thead>
 <?php
@@ -49,9 +50,10 @@
 		echo "<tr class=\"" . $status . "\"> ";
 		echo "$link". $row['appointment_no'] . "$endingTag";
 		echo "$link" . $row['full_name'] . "$endingTag";
-		echo "$link" . $row['medical_condition'] . "$endingTag";
+		// echo "$link" . $row['medical_condition'] . "$endingTag";
 		echo "$link" . $row['speciality'] . "$endingTag";
 		echo "$link" . $row['payment_amount'] . "$endingTag";
+		echo "$link" . $row['case_closed'] . "$endingTag";
 		echo "</tr>";
 	}
 ?>

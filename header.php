@@ -25,7 +25,7 @@
               </li>
               <?php
                 if (isset($_SESSION['username'])) {
-                    echo '<a href="logout.php" style="align-items: right;"> <button class="btn btn-secondary" >Logout
+                    echo '<a href="logout.php" style="align-items: right;"> <button class="btn btn-danger" >Logout
                   </button></a>';
                 }
               ?>
