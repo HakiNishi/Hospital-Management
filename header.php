@@ -12,7 +12,7 @@
     <link href="bootstrap.min.css" rel="stylesheet">
     <!-- <link href="jumbotron.css" rel="stylesheet"> -->
   </head>
-  <body>
+  <body style="background-image: linear-gradient(to bottom right,#ff9933 0%, #ffff66 100%);">
       <div class="container" style="padding-top: 10px;">
         <nav class="navbar navbar-static-top">
           <a href="index.php" class="navbar-brand">🌅 Sunrise Hospital</a>
@@ -25,8 +25,8 @@
               </li>
               <?php
                 if (isset($_SESSION['username'])) {
-                    echo '<li class="nav-item" style="align-items: right;"> <a class="nav-link" href="logout.php">Logout</a>
-                  </li>';
+                    echo '<a href="logout.php" style="align-items: right;"> <button class="btn btn-secondary" >Logout
+                  </button></a>';
                 }
               ?>
             </ul>

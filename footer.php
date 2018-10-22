@@ -1,18 +1,17 @@
     <div class="container footer">
       <hr>
       <footer>
-        <p align="right">
+        <h5 align="center">
         <?php
                 if (!isset($_SESSION['username'])) {
                     echo '<a class="nav-link" href="hms-staff.php">Staff Login</a>
                   </li>';
                 }
         ?>
-        </p>
-        <p align="right">
-        Made and managed using HMS by KAPP - <?php echo date('Y'); ?>
-        </nav>
-		</p>
+        </h5>
+        <h5 align="center">
+        Made and managed by Jinesh, Rahil & Aditya - <?php echo date('Y'); ?>
+        </h5>
       </footer>
     </div>
   </body>

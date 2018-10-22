@@ -5,8 +5,10 @@
 ?>
 
 <?php
-
-    $connection = new mysqli('localhost', 'root', '', 'hospital');
+    $servername='localhost';
+    $username='root';
+    $password='';
+    $connection = new mysqli($servername, $username, $password, 'hospital');
 
     $error_flag = 0;
     $result;
@@ -221,14 +223,14 @@
     {
         global $connection;
 
-        return $connection->query("SELECT appointment_no, full_name, medical_condition FROM patient_info, appointments where speciality='$doctor' AND patient_info.patient_id = appointments.patient_id");
+        return $connection->query("SELECT appointment_no, full_name, medical_condition, doctors_suggestion FROM patient_info, appointments where speciality='$doctor' AND patient_info.patient_id = appointments.patient_id");
     }
 
     function getAllAppointments()
     {
         global $connection;
 
-        return $connection->query('SELECT appointment_no, full_name,speciality, medical_condition FROM patient_info, appointments where patient_info.patient_id = appointments.patient_id');
+        return $connection->query('SELECT appointment_no, full_name,speciality, medical_condition, payment_amount FROM patient_info, appointments where patient_info.patient_id = appointments.patient_id');
     }
 
     function getAllPatientDetail($appointment_no)

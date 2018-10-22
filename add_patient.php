@@ -19,8 +19,8 @@
   <h2>Welcome, <?php echo $_SESSION["fullname"];?>!</h2>
       <div class='alert alert-info'>
               <strong>Info!</strong> Appointment will be booked only for today - <?php echo date('j/n/y'); ?>. Appointment time will be between 10:30 to 3:30 or 4:30 to 9:30 once appointment is booked.</div>
-      <h3>Enter Information</h3>
-                <?php
+            <h3>Enter Information</h3>
+            <?php
                   if(isset($_POST['apfullname'])){
                     $i = enter_patient_info($_POST['apfullname'],$_POST['apAge'],$_POST['apweight'],$_POST['apphone_no'],$_POST['apaddress']);
                     appointment_booking($i, $_POST['apSpecialist'], $_POST['apCondition']);
@@ -30,7 +30,7 @@
                     }
 
                   }
-                ?>
+            ?>
             <form action="add_patient.php" method="POST">
 
             <div class="form-group" >

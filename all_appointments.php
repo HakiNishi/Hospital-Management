@@ -28,7 +28,7 @@
 				<th><center>Patient's Full Name</center></th>
 				<th><center>Medical Condition</center></th>
 				<th><center>Doctor Needed</center></th>
-
+				<th><center>Payment Amount</center></th>
 				</tr>
 				</thead>
 <?php
@@ -51,6 +51,7 @@
 		echo "$link" . $row['full_name'] . "$endingTag";
 		echo "$link" . $row['medical_condition'] . "$endingTag";
 		echo "$link" . $row['speciality'] . "$endingTag";
+		echo "$link" . $row['payment_amount'] . "$endingTag";
 		echo "</tr>";
 	}
 ?>

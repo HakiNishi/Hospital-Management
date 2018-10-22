@@ -9,8 +9,8 @@ session_start();
   noAccessIfLoggedIn();
 ?>
 <div class="container">
- 	<h1>Welcome to Sunrise Hospital's Official Website</h1>
-    <p class="block-quote">Our aim has always been to bring world–class medical care within the reach of common man.</p>
+ 	<h1 style="color: #0000cc">Welcome to Sunrise Hospital's Official Website</h1>
+    <p class="block-quote" style="color: #003399">Our aim has always been to bring world–class medical care within the reach of common man.</p>
     <?php include('slideshow.php');?>
   <?php 
     if(isset($_POST['lemail'])){
