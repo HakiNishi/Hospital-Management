@@ -1,6 +1,6 @@
 # Hospital Management System Mini-Project
 
-This **was my first short PHP project** for Web Technology subject created in October 2018. 
+This **was my first PHP project** for Web Technology subject created in October 2018. 
 
 ## Features:
   1. Front Page Slideshow
